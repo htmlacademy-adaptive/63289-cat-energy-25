@@ -1,0 +1,26 @@
+.process-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.process-list__item {
+  display: flex;
+  align-items: center;
+}
+.process-list__item::before {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 60px;
+  background-color: @color-basic-green;
+  flex-shrink: 0;
+}
+
+.process-list__text {
+  font-family: 'Arial';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  margin-left: 20px;
+}
