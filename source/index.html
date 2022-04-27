@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="./css/style.css">
   </head>
@@ -10,27 +11,33 @@
       <div class="main-header__wrapper wrapper">
         <img class="main-header__icon" src="https://via.placeholder.com/34x38/09f.png/fff" alt="Иконка Кота" />
         <img class="main-header__logo" src="https://via.placeholder.com/101x18/09f.png/fff" alt="Логотип Cat Energy" />
-        <nav class="main-header__nav">
-          <ul class="main-header__site-nav site-nav">
-            <li class="site-nav__item site-nav__item--current">
-              <a class="site-nav__link" href="#">Главная</a>
-            </li>
-            <li class="site-nav__item">
-              <a class="site-nav__link" href="./catalog.html">Каталог продукции</a>
-            </li>
-            <li class="site-nav__item">
-              <a class="site-nav__link" href="./form.html">Подпор программы</a>
-            </li>
-          </ul>
-        </nav>
+        <button class="main-header__toggle">X</button>
       </div>
+      <nav class="main-header__nav">
+        <ul class="main-header__site-nav site-nav">
+          <li class="site-nav__item site-nav__item--current">
+            <a class="site-nav__link" href="#">Главная</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="./catalog.html">Каталог продукции</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="./form.html">Подпор программы</a>
+          </li>
+        </ul>
+      </nav>
     </header>
     <main class="main">
       <h1 class="visually-hidden">Интернет-магазин фитнес еды для котиков</h1>
       <section class="promo">
-        <h2 class="promo__title">Функциональное питание для котов</h2>
-        <p class="promo__slogan">Занялся собой? Займись котом!</p>
-        <img class="promo__image" src="https://via.placeholder.com/280x270/09f.png/fff" alt="Cat Energy, курица" />
+        <div class="promo__background"></div>
+        <div class="promo__text">
+          <h2 class="promo__title">Функциональное<br /> питание для котов</h2>
+          <p class="promo__slogan">Занялся собой? Займись котом!</p>
+        </div>
+        <div class="promo__product wrapper">
+          <img class="promo__image" src="https://via.placeholder.com/280x270/09f.png/fff" alt="Cat Energy, курица" />
+        </div>
         <a class="promo__link button" href="#">Подобрать программу</a>
       </section>
       <section class="programs">
@@ -66,7 +73,7 @@
         </ul>
       </section>
       <section class="example">
-        <div class="wrapper">
+        <div class="example__wrapper wrapper">
           <h2 class="example__title">Живой пример</h2>
           <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
           <div class="example__params params">
@@ -83,8 +90,8 @@
               <p class="params__value">15 000 РУБ.</p>
             </div>
           </div>
-          <img class="example__image" src="https://via.placeholder.com/280x232/09f.png/fff" alt="Кот Борис" />
           <div class="example__progress progress">
+            <img class="progress__image" src="https://via.placeholder.com/280x232/09f.png/fff" alt="Кот Борис" />
             <span class="progress__before">Было</span>
             <progress class="progress__line" max="100" value="50">50%</progress>
             <span class="progress__after">Стало</span>
@@ -93,14 +100,16 @@
       </section>
       <section class="contacts">
         <h2 class="visually-hidden">Контакты</h2>
-        <header class="contacts__header wrapper">
-          <p class="contacts__message">Приглашаем <br /> к сотрудничеству <br /> дилеров!</p>
-          <div class="contacts__address">
-            <p class="contacts__street">ул. Большая <br />Конюшенная, д. 19/8</p>
-            <p class="contacts__city">Санкт-Петербург</p>
-          </div>
-        </header>
-        <div class="contact_map">
+        <div class="contacts__wrapper wrapper">
+          <header class="contacts__header">
+            <p class="contacts__message">Приглашаем <br /> к сотрудничеству <br /> дилеров!</p>
+            <div class="contacts__address">
+              <p class="contacts__street">ул. Большая <br />Конюшенная, д. 19/8</p>
+              <p class="contacts__city">Санкт-Петербург</p>
+            </div>
+          </header>
+        </div>
+        <div class="contacts__map">
           <img class="contacts__map-image" src="https://via.placeholder.com/320x362/09f.png/fff" alt="Карта города">
         </div>
       </section>

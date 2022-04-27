@@ -1,9 +1,26 @@
 .main-header {
+  display: flex;
+  flex-direction: column;
   background-color: var(--color-basic-white);
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .main-header__wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (min-width: 768px) {
+    justify-content: flex-start;
+  }
+}
+
+.main-header__toggle {
+  @media (min-width: 768px) {
+    display: none;
+  }
 }
