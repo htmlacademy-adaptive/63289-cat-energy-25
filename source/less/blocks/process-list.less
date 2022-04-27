@@ -2,12 +2,35 @@
   padding: 0;
   margin: 0;
   list-style: none;
+  display: grid;
+  gap: 20px;
+
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 37px 55px;
+  }
+
+  @media (min-width: 1240px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 80px;
+  }
 }
 
 .process-list__item {
   display: flex;
   align-items: center;
+  margin-bottom: 20px;
+
+  @media (min-width: 768px) {
+    margin-right: 98px;
+  }
+
+  @media (min-width: 1240px) {
+    margin-right: 0;
+  }
 }
+
 .process-list__item::before {
   content: "";
   display: block;
@@ -18,9 +41,14 @@
 }
 
 .process-list__text {
-  font-family: 'Arial';
+  font-family: "Arial", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   margin-left: 20px;
+
+  @media (min-width: 768px) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }

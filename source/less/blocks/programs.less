@@ -1,13 +1,16 @@
-.programs {
-
-}
-
 .programs__list {
   padding: 0;
   margin: 0;
   list-style: none;
   display: grid;
   gap: 20px;
+
+  @media (min-width: 768px) {
+    padding: 30px;
+  }
+
+  @media (min-width: 1240px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
 }
-
-
