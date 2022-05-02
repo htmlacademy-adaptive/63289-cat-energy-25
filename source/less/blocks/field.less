@@ -1,32 +1,33 @@
 .field {
   display: flex;
   align-items: center;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  /* identical to box height, or 112% */
+  color: @color-special_dark-grey;
+  text-transform: uppercase;
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .field__label {
-  font-family: "Oswald", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 18px;
-  /* identical to box height, or 112% */
+  flex-shrink: 0;
 
-  text-transform: uppercase;
-  color: @color-special_dark-grey;
 }
 
 .field__input {
-  font-family: "Oswald", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 18px;
-  /* identical to box height, or 112% */
-
+  font: inherit;
+  text-transform: uppercase;
+  flex-grow: 1;
   display: flex;
   align-items: center;
-  text-transform: uppercase;
   padding: 0 15px;
   /* special_dark-grey */
-
   color: @color-special_dark-grey;
   height: 45px;
   border: 1px solid #e7e7e7;
@@ -37,12 +38,8 @@
 .field__textarea {
   padding: 10px 15px;
   border: 1px solid #e7e7e7;
-  font-family: "Oswald", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 18px;
-  /* or 112% */
-
+  font: inherit;
+  flex-grow: 1;
   text-transform: uppercase;
 
   /* special_dark-grey */

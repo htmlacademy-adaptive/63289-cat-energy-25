@@ -6,10 +6,69 @@
   /* or 129% */
   text-transform: uppercase;
   color: @color-black;
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .survey__program-selection {
-  margin: 0;
-  padding: 0;
+  margin: 0 -21px;
+  padding: 21px;
   border: 1px solid #d9d9d9;
+
+  @media (min-width: 768px) {
+    margin: 0 40px;
+    padding: 25px 28px;
+  }
+
+  @media (min-width: 1240px) {
+    margin: 0;
+
+  }
+}
+
+.survey__block-cat {
+  display: grid;
+
+  @media (min-width: 1240px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
+}
+
+.survey__block-contacts {
+  @media (min-width: 1240px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
+}
+
+.survey__extra {
+  display: grid;
+  gap: 12px;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px 60px;
+  }
+
+  @media (min-width: 1240px) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 80px;
+  }
+}
+
+.survey__block-submit {
+  display: grid;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+  @media (min-width: 1240px) {
+    gap: 80px;
+  }
 }

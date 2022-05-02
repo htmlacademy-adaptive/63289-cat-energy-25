@@ -2,6 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="./css/style.css">
   </head>
@@ -10,20 +11,21 @@
       <div class="main-header__wrapper wrapper">
         <img class="main-header__icon" src="https://via.placeholder.com/34x38/09f.png/fff" alt="Иконка Кота" />
         <img class="main-header__logo" src="https://via.placeholder.com/101x18/09f.png/fff" alt="Логотип Cat Energy" />
-        <nav class="main-header__nav">
-          <ul class="main-header__site-nav site-nav">
-            <li class="site-nav__item site-nav__item--current">
-              <a class="site-nav__link" href="./index.html">Главная</a>
-            </li>
-            <li class="site-nav__item">
-              <a class="site-nav__link" href="./catalog.html">Каталог продукции</a>
-            </li>
-            <li class="site-nav__item">
-              <a class="site-nav__link" href="./form.html">Подпор программы</a>
-            </li>
-          </ul>
-        </nav>
+        <button class="main-header__toggle">X</button>
       </div>
+      <nav class="main-header__nav">
+        <ul class="main-header__site-nav site-nav">
+          <li class="site-nav__item site-nav__item--current">
+            <a class="site-nav__link" href="#">Главная</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="./catalog.html">Каталог продукции</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="./form.html">Подпор программы</a>
+          </li>
+        </ul>
+      </nav>
     </header>
     <main class="main">
       <div class="wrapper">
@@ -33,7 +35,7 @@
         <h2 class="visually-hidden">Форма анкеты</h2>
         <p class="survey__title wrapper">Заполните анкету, и мы подберем программу питания для вашего кота</p>
         <form class="survey__form" action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="fieldset fieldset--without-legend wrapper">
+          <fieldset class="survey__block-cat fieldset fieldset--without-legend wrapper">
             <legend class="visually-hidden">Данные кота</legend>
             <div class="survey__cat">
               <p class="field">
@@ -66,7 +68,7 @@
           </fieldset>
           <fieldset class="fieldset">
             <legend class="fieldset__title">Контактные данные (владельца кота)</legend>
-            <div class="wrapper">
+            <div class="survey__block-contacts wrapper">
               <p class="field">
                 <label class="field__label" for="form-age">E-mail:*</label>
                 <input  class="field__input" type="email" name="email" id="form-email" required/>
@@ -79,8 +81,8 @@
           </fieldset>
           <fieldset class="fieldset">
             <legend class="fieldset__title">Комментарий</legend>
-            <div class="wrapper">
-              <textarea class="field__textarea" name="comment" cols="30" rows="10"></textarea>
+            <div class="field wrapper">
+              <textarea class="field__textarea" name="comment" rows="5"></textarea>
             </div>
           </fieldset>
           <fieldset class="fieldset">
@@ -104,17 +106,26 @@
               </li>
             </ul>
           </fieldset>
-          <button class="button button--medium" type="submit">Отправить заявку</button>
+          <div class="survey__block-submit">
+            <button class="button button--medium" type="submit">Отправить заявку</button>
+            <p class="survey__required">* — Обязательные поля</p>
+          </div>
         </form>
       </section>
       <section class="contacts contacts--dark">
         <h2 class="visually-hidden">Контакты</h2>
-        <header class="contacts__header wrapper">
-          <p class="contacts__message">Приглашаем к сотрудничеству дилеров!</p>
-          <p class="contacts__street">ул. Большая Конюшенная, д. 19/8</p>
-          <p class="contacts__city">Санкт-Петербург</p>
-        </header>
-        <img class="contacts__map" src="https://via.placeholder.com/320x362/09f.png/fff" alt="Карта города">
+        <div class="contacts__wrapper wrapper">
+          <header class="contacts__header">
+            <p class="contacts__message">Приглашаем <br /> к сотрудничеству <br /> дилеров!</p>
+            <div class="contacts__address">
+              <p class="contacts__street">ул. Большая <br />Конюшенная, д. 19/8</p>
+              <p class="contacts__city">Санкт-Петербург</p>
+            </div>
+          </header>
+        </div>
+        <div class="contacts__map">
+          <img class="contacts__map-image" src="https://via.placeholder.com/320x362/09f.png/fff" alt="Карта города">
+        </div>
       </section>
     </main>
     <footer class="main-footer">
