@@ -1,0 +1,13 @@
+.main-catalog__list {
+  display: grid;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+
+  @media (min-width: 1240px) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 63px 80px;
+  }
+}

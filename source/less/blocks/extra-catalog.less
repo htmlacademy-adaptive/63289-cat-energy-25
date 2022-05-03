@@ -1,3 +1,12 @@
+.extra-catalog {
+  display: grid;
+
+  @media (min-width: 1240px) {
+    grid-template-columns: 1fr 245px;
+    gap: 80px;
+  }
+}
+
 .extra-catalog__title {
   font-family: "Oswald", sans-serif;
   font-weight: 400;
@@ -6,6 +15,15 @@
   /* identical to box height, or 100% */
 
   color: @color-black;
+
+  @media (min-width: 768px) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: 1240px) {
+    grid-column: 1/-1;
+  }
 }
 
 .extra-catalog__list {
