@@ -11,7 +11,7 @@
     gap: 37px 55px;
   }
 
-  @media (min-width: 1240px) {
+  @media (min-width: 1280px) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 80px;
   }
@@ -21,23 +21,82 @@
   display: flex;
   align-items: center;
   margin-bottom: 20px;
+  background-repeat: no-repeat;
+  background-size: 0;
 
   @media (min-width: 768px) {
-    margin-right: 98px;
+    background-size: auto;
+    width: 250px;
+    min-height: 280px;
+    align-items: flex-start;
+    flex-direction: column;
   }
 
-  @media (min-width: 1240px) {
+  @media (min-width: 1280px) {
     margin-right: 0;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: @color-basic-green;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+
+    @media (min-width: 768px) {
+      width: 80px;
+      height: 80px;
+      margin-top: 40px;
+    }
+  }
+
+  &--useful {
+    background-image: url("./../../img/1.svg");
+    background-position: right 30px bottom 13px;
+
+    &::before {
+      background-image: url("./../../img/icon_leaf.svg");
+    }
+  }
+
+  &--water{
+    background-image: url("./../../img/2.svg");
+    background-position: right bottom 13px;
+
+    &::before {
+      background-image: url("./../../img/icon_tub.svg");
+    }
+  }
+
+  &--meal{
+    background-image: url("./../../img/3.svg");
+    background-position: right bottom 13px;
+
+    &::before {
+      background-image: url("./../../img/icon_eat.svg");
+    }
+  }
+
+  &--time{
+    background-image: url("./../../img/4.svg");
+    background-position: right bottom 13px;
+
+    &::before {
+      background-image: url("./../../img/icon_alarm.svg");
+    }
   }
 }
 
-.process-list__item::before {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 60px;
-  background-color: @color-basic-green;
-  flex-shrink: 0;
+.process-list__number {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 280px;
+  line-height: 280px;
+  color: #F2F2F2;
+  display: none;
 }
 
 .process-list__text {
@@ -50,5 +109,7 @@
   @media (min-width: 768px) {
     font-size: 16px;
     line-height: 24px;
+    margin-left: 0;
+    margin-top: 31px;
   }
 }

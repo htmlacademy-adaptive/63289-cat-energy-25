@@ -1,23 +1,116 @@
+.params {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 32px 24px;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 162px 162px 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+  }
+
+  @media (min-width: 1280px) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 32px 24px;
+  }
+}
+
 .params__item {
   font-family: "Oswald", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
   color: @color-black;
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
-.params__item--outline .params__name {
-  font-family: "Arial", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 12px;
-  color: @color-special_dark-grey;
+.params__value,
+.params__name {
+  margin: 0;
 }
 
-.params__item--outline .params__value {
-  font-family: "Oswald", sans-serif;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 24px;
+.params__item--cost {
+  grid-column: 1/-1;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+
+  .params__value {
+    margin-left: 4px;
+
+    @media (min-width: 1280px) {
+      margin-left: 63px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    justify-self: flex-end;
+    grid-column: auto;
+    flex-direction: column;
+    text-align: right;
+  }
+
+  @media (min-width: 1280px) {
+    grid-column: 1/-1;
+    flex-direction: row;
+    justify-self: left;
+  }
+}
+
+.params__item--outline {
+  position: relative;
+  min-height: 54px;
+  border: 1px solid #CDCDCD;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+
+  .params__name {
+    background-color: #EAEAEA;
+    text-align: center;
+    width: 87px;
+    padding: 0 16px;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    color: @color-special_dark-grey;
+
+    position: absolute;
+    bottom: 0;
+    transform: translate(0, 50%);
+
+    @media (min-width: 768px) {
+      font-size: 14px;
+      line-height: 14px;
+      background-color: @color-white;
+    }
+  }
+
+  .params__value {
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 24px;
+    margin: 0;
+
+    @media (min-width: 768px) {
+      font-size: 30px;
+      line-height: 37px;
+    }
+  }
+
+  @media (min-height: 768px) {
+    min-height: 70px;
+  }
 }
