@@ -3,12 +3,28 @@
 }
 
 .main-footer__wrapper {
+  margin: 0 20px;
   display: grid;
   align-items: center;
   grid-template-rows: 95px 63px 78px;
 
   @media (min-width: 768px) {
+    margin: 0 30px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 147px;
+  }
+
+  @media (min-width: 1280px) {
+    margin: 0 auto;
+    width: 1220px;
+  }
+}
+
+.main-footer__logo {
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: 768px) {
+    justify-content: flex-start;
   }
 }

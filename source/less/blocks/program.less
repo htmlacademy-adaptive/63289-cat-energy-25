@@ -1,9 +1,47 @@
 .program {
   background-color: @color-basic-grey;
+  background-repeat: no-repeat;
+  background-position-x: 20px;
+  background-position-y: 20px;
   padding: 20px;
+
+  &--slim {
+    background-image: url("./../../img/cat_slim.svg");
+  }
+
+  &--pro {
+    background-image: url("./../../img/cat_pro.svg");
+    background-position-x: 13px;
+    background-position-y: 24px;
+  }
 
   @media (min-width: 768px) {
     padding: 52px;
+    padding-right: 316px;
+
+    &--slim {
+      background-image: url("./../../img/cat_slim-big.svg");
+      background-position: center right 62px;
+    }
+
+    &--pro {
+      background-image: url("./../../img/cat_pro-big.svg");
+      background-position: center right 28px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    padding-right: 52px;
+
+    &--slim {
+      background-image: url("./../../img/cat_slim-mid.svg");
+      background-position: 52px 41px;
+    }
+
+    &--pro {
+      background-image: url("./../../img/cat_pro-mid.svg");
+      background-position: 33px 47px;
+    }
   }
 }
 
@@ -12,10 +50,19 @@
   font-size: 24px;
   font-weight: 400;
   line-height: 37px;
+  margin: 0;
+  margin-top: 10px;
+  padding-left: 70px;
 
   @media (min-width: 768px) {
     font-size: 36px;
     line-height: 36px;
+    padding-left: 0;
+  }
+
+  @media (min-width: 1280px) {
+    padding-left: 162px;
+    margin-top: 25px;
   }
 }
 
@@ -25,11 +72,20 @@
   font-size: 14px;
   line-height: 18px;
   color: @color-special_dark-grey;
+  margin: 0;
+  margin-top: 30px;
+  padding-bottom: 23px;
+  border-bottom: 1px solid #d9d9d9;
 
   @media (min-width: 768px) {
     font-size: 16px;
     line-height: 24px;
     max-width: 340px;
+    border-bottom: none;
+  }
+
+  @media (min-width: 1280px) {
+    margin-top: 73px;
   }
 }
 
@@ -40,9 +96,26 @@
   line-height: 16px;
   text-decoration: none;
   color: @color-black;
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+
+  &::after {
+    content: "";
+    display: block;
+    margin-left: 15px;
+    width: 24px;
+    height: 12px;
+    background-image: url("./../../img/icon-arrow.svg");
+  }
 
   @media (min-width: 768px) {
     font-size: 20px;
     line-height: 30px;
+    margin-top: 52px;
+  }
+
+  @media (min-width: 1280px) {
+    margin-top: 27px;
   }
 }
