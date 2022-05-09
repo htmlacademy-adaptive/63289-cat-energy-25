@@ -7,25 +7,27 @@
     <link rel="stylesheet" href="./css/style.css">
   </head>
   <body class="page__body">
-    <header class="main-header">
-      <div class="main-header__wrapper wrapper">
-        <img class="main-header__icon" src="https://via.placeholder.com/34x38/09f.png/fff" alt="Иконка Кота" />
-        <img class="main-header__logo" src="https://via.placeholder.com/101x18/09f.png/fff" alt="Логотип Cat Energy" />
-        <button class="main-header__toggle">X</button>
+    <header class="page__header main-header main-header--no-js">
+      <div class="main-header__wrapper">
+        <div class="main-header__logos">
+          <img class="main-header__icon" src="./img/logo-mobile.svg" alt="Иконка Кота" />
+          <img class="main-header__logo" src="./img/header-logo.svg" width="101" height="18" alt="Логотип Cat Energy" />
+          <button class="main-header__toggle"></button>
+        </div>
+        <nav class="main-header__nav">
+          <ul class="main-header__site-nav site-nav">
+            <li class="site-nav__item site-nav__item--current">
+              <a class="site-nav__link" href="#">Главная</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="./catalog.html">Каталог продукции</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="./form.html">Подпор программы</a>
+            </li>
+          </ul>
+        </nav>
       </div>
-      <nav class="main-header__nav">
-        <ul class="main-header__site-nav site-nav">
-          <li class="site-nav__item site-nav__item--current">
-            <a class="site-nav__link" href="#">Главная</a>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="./catalog.html">Каталог продукции</a>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="./form.html">Подпор программы</a>
-          </li>
-        </ul>
-      </nav>
     </header>
     <main class="main">
       <div class="wrapper">
@@ -33,7 +35,9 @@
       </div>
       <section class="survey">
         <h2 class="visually-hidden">Форма анкеты</h2>
-        <p class="survey__title wrapper">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+        <div class="wrapper">
+          <p class="survey__title">Заполните анкету, и мы подберем<br /> программу питания для вашего кота</p>
+        </div>
         <form class="survey__form" action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="survey__block-cat fieldset fieldset--without-legend wrapper">
             <legend class="visually-hidden">Данные кота</legend>
@@ -53,16 +57,25 @@
             </div>
             <ul class="survey__program-selection">
               <li class="field">
-                <input class="field__radio" type="radio" name="program" value="slim" id="form-program-slim">
-                <label class="field__label" for="form-program-slim">Похудение</label>
+                <label class="field__label" for="form-program-slim">
+                  <input class="field__radio visually-hidden" type="radio" name="program" value="slim" id="form-program-slim">
+                  <span class="field__radio-control"></span>
+                  Похудение
+                </label>
               </li>
               <li class="field">
-                <input class="field__radio" type="radio" name="program" value="pro" id="form-program-pro">
-                <label class="field__label" for="form-program-slim">Набор массы</label>
+                <label class="field__label" for="form-program-pro">
+                  <input class="field__radio visually-hidden" type="radio" name="program" value="pro" id="form-program-pro">
+                  <span class="field__radio-control"></span>
+                  Набор массы
+                </label>
               </li>
               <li class="field">
-                <input class="field__radio" type="radio" name="program" value="none" id="form-program-none">
-                <label class="field__label" for="form-program-none">Не знаю (Нужен ваш совет)</label>
+                <label class="field__label" for="form-program-none">
+                  <input class="field__radio visually-hidden" type="radio" name="program" value="none" id="form-program-none">
+                  <span class="field__radio-control"></span>
+                  Не знаю (Нужен ваш совет)
+                </label>
               </li>
             </ul>
           </fieldset>
