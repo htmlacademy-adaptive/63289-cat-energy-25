@@ -37,13 +37,19 @@
   gap: 13px;
 
   @media (min-width: 768px) {
-    margin: 0 40px;
+    margin: 0;
     margin-top: 72px;
     padding: 25px 28px;
   }
 
   @media (min-width: 1280px) {
-    margin: 0;
+    margin-top: 0;
+  }
+}
+
+.survey__form {
+  @media (min-width: 1280px) {
+    margin-top: 66px;
   }
 }
 
@@ -53,29 +59,57 @@
   @media (min-width: 1280px) {
     grid-template-columns: 1fr 1fr;
     gap: 80px;
-    margin: 0 40px;
   }
+
 }
 
 .survey__cat {
   margin-top: 39px;
   display: grid;
   gap: 13px;
+
+  @media (min-width: 768px) {
+    margin-top: 66px;
+  }
+
+  @media (min-width: 1280px) {
+    margin-top: 0;
+  }
 }
 
 .survey__block-contacts {
+  margin-top: 69px;
+  display: grid;
+  gap: 14px;
+
+  @media (min-width: 768px) {
+    gap: 20px;
+    margin-top: 88px;
+  }
+
   @media (min-width: 1280px) {
-    display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 80px;
   }
 }
 
+.survey__block-comment {
+  margin-top: 47px;
+
+  @media (min-width: 768px) {
+    margin-top: 88px;
+  }
+}
+
 .survey__extra {
+  margin: 0;
+  padding: 0;
+  padding-top: 43px;
   display: grid;
   gap: 12px;
 
   @media (min-width: 768px) {
+    padding-top: 69px;
     grid-template-columns: 1fr 1fr;
     gap: 32px 60px;
   }

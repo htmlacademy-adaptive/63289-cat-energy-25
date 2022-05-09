@@ -45,9 +45,11 @@
 .field__textarea {
   padding: 10px 15px;
   border: 1px solid #e7e7e7;
+  box-sizing: border-box;
   font: inherit;
   flex-grow: 1;
   text-transform: uppercase;
+  height: 150px;
 
   /* special_dark-grey */
   color: @color-special_dark-grey;
@@ -82,6 +84,39 @@
     @media (min-width: 768px) {
       width: 18px;
       height: 18px;
+    }
+  }
+}
+
+.field__checkbox-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid @color-special_grey;
+  margin-right: 16px;
+  box-sizing: border-box;
+
+  @media (min-width: 768px) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.field__checkbox:checked + .field__checkbox-control {
+  &::before {
+    content: "";
+    display: block;
+    width: 18px;
+    height: 14px;
+    background-image: url("./../../img/tick.svg");
+    background-position: center;
+    background-size: cover;
+
+    @media (min-width: 768px) {
+      width: 24px;
+      height: 19px;
     }
   }
 }
