@@ -1,6 +1,23 @@
 .order-all {
   min-height: 290px;
   background-color: fade(@color-basic-green, 85%);
+  background-image: url("./../img/order-all-back.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 78px;
+    height: 80px;
+    background-image: url("./../img/icon_gift.svg");
+  }
 }
 
 .order-all__text {
@@ -11,4 +28,8 @@
   /* or 125% */
 
   color: @color-basic-white;
+  margin-top: 48px;
+  margin-bottom: 43px;
+  width: 164px;
+  text-align: center;
 }
