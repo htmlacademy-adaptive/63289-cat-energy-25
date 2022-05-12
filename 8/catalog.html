@@ -197,7 +197,11 @@
           </header>
         </div>
         <div class="contacts__map">
-          <img class="contacts__map-image" src="https://via.placeholder.com/320x362/09f.png/fff" alt="Карта города">
+          <picture>
+            <source media="(min-width: 850px)" srcset="./img/map-desktop.png 1x, ./img/map-desktop@2x.png 2x"/>
+            <source media="(min-width: 400px)" srcset="./img/map-tablet.png 1x, ./img/map-tablet@2x.png 2x"/>
+            <img class="contacts__map-image" src="./img/map-mobile.png" srcset="./img/map-mobile@2x.png 2x" alt="Карта города" />
+          </picture>
         </div>
       </section>
     </main>

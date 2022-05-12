@@ -98,6 +98,16 @@
     justify-content: flex-start;
   }
 }
+@media (min-width: 768px) {
+  .main-header__logo {
+    margin-left: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .main-header__logo {
+    margin-left: 14px;
+  }
+}
 .main-header__nav {
   display: none;
 }
@@ -1011,6 +1021,12 @@
     line-height: 20px;
   }
 }
+.contacts__map {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
 @media (min-width: 1280px) {
   .contacts__map {
     grid-row: 1/2;
@@ -1303,6 +1319,7 @@
 }
 .field {
   display: flex;
+  position: relative;
   align-items: center;
   font-family: "Oswald", sans-serif;
   font-weight: 400;
@@ -1344,6 +1361,25 @@
     height: 52px;
   }
 }
+.field--icon::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 22px;
+  position: absolute;
+  right: 15px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.field--icon-phone::after {
+  background-image: url("../img/icon_phone.svg");
+}
+.field--icon-email::after {
+  background-image: url("../img/icon_email.svg");
+}
+.field--icon::placeholder {
+  color: #444;
+}
 .field__textarea {
   padding: 10px 15px;
   border: 1px solid #e7e7e7;
@@ -1353,6 +1389,9 @@
   text-transform: uppercase;
   height: 150px;
   /* special_dark-grey */
+  color: #444;
+}
+.field__textarea::placeholder {
   color: #444;
 }
 .field__radio-control {

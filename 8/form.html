@@ -86,13 +86,13 @@
             </div>
             <div class="wrapper wrapper--in">
               <div class="survey__block-contacts">
-                <p class="field">
+                <p class="field field--icon field--icon-email">
                   <label class="field__label" for="form-age">E-mail:*</label>
                   <input  class="field__input" type="email" name="email" id="form-email" required/>
                 </p>
-                <p class="field">
+                <p class="field field--icon field--icon-phone">
                   <label class="field__label" for="form-age">Телефон:*</label>
-                  <input  class="field__input" type="tel" name="phone" id="form-phone" required/>
+                  <input  class="field__input field__input--icon" type="tel" name="phone" id="form-phone" required/>
                 </p>
               </div>
             </div>
@@ -104,7 +104,7 @@
             <div class="wrapper wrapper--in">
               <div class="survey__block-comment">
                 <div class="field">
-                  <textarea class="field__textarea" name="comment"></textarea>
+                  <textarea class="field__textarea" placeholder="" name="comment"></textarea>
                 </div>
               </div>
             </div>
@@ -152,7 +152,7 @@
           </div>
         </form>
       </section>
-      <section class="contacts">
+      <section class="contacts contacts--dark">
         <h2 class="visually-hidden">Контакты</h2>
         <div class="contacts__wrapper wrapper">
           <header class="contacts__header">
@@ -164,7 +164,11 @@
           </header>
         </div>
         <div class="contacts__map">
-          <img class="contacts__map-image" src="https://via.placeholder.com/320x362/09f.png/fff" alt="Карта города">
+          <picture>
+            <source media="(min-width: 850px)" srcset="./img/map-desktop.png 1x, ./img/map-desktop@2x.png 2x"/>
+            <source media="(min-width: 400px)" srcset="./img/map-tablet.png 1x, ./img/map-tablet@2x.png 2x"/>
+            <img class="contacts__map-image" src="./img/map-mobile.png" srcset="./img/map-mobile@2x.png 2x" alt="Карта города" />
+          </picture>
         </div>
       </section>
     </main>

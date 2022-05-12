@@ -11,7 +11,11 @@
     <header class="page__header main-header main-header--no-js">
       <div class="main-header__wrapper">
         <div class="main-header__logos">
-          <img class="main-header__icon" src="./img/logo-mobile.svg" alt="Иконка Кота" />
+          <picture>
+            <source media="(min-width: 1280px)" srcset="./img/logo-desktop.svg" />
+            <source media="(min-width: 768px)" srcset="./img/logo-tablet.svg" />
+            <img class="main-header__icon" src="./img/logo-mobile.svg" alt="Иконка Кота" />
+          </picture>
           <img class="main-header__logo" src="./img/header-logo.svg" width="101" height="18" alt="Логотип Cat Energy" />
           <button class="main-header__toggle"></button>
         </div>
@@ -41,7 +45,11 @@
             <a class="promo__link button" href="#">Подобрать программу</a>
           </div>
           <div class="promo__product">
-            <img class="promo__image" src="./img/promo-product.png" alt="Cat Energy, курица" />
+            <picture>
+              <source media="(min-width: 1280px)" srcset="./img/promo/can-desktop.png 1x, ./img/promo/can-desktop@2x.png 2x" />
+              <source media="(min-width: 768px)" srcset="./img/promo/can-tablet.png 1x, ./img/promo/can-tablet@2x.png 2x" />
+              <img class="promo__image" src="./img/promo/can-mobile.png" srcset="./img/promo/can-mobile@2x.png 2x" alt="Cat Energy, курица" />
+            </picture>
           </div>
         </div>
       </section>
@@ -130,7 +138,11 @@
           </header>
         </div>
         <div class="contacts__map">
-          <img class="contacts__map-image" src="https://via.placeholder.com/320x362/09f.png/fff" alt="Карта города">
+          <picture>
+            <source media="(min-width: 850px)" srcset="./img/map-desktop.png 1x, ./img/map-desktop@2x.png 2x"/>
+            <source media="(min-width: 400px)" srcset="./img/map-tablet.png 1x, ./img/map-tablet@2x.png 2x"/>
+            <img class="contacts__map-image" src="./img/map-mobile.png" srcset="./img/map-mobile@2x.png 2x" alt="Карта города" />
+          </picture>
         </div>
       </section>
     </main>
