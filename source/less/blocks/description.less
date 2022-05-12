@@ -7,4 +7,31 @@
 
   /* special_dark-grey */
   color: @color-special_dark-grey;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  @media (min-width: 768px) {
+    grid-template-rows: 32px 32px 32px;
+  }
+}
+
+.description__termin {
+  display: flex;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    border-bottom: 1px solid @color-special_grey;
+  }
+}
+
+.description__definition {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0;
+
+  @media (min-width: 768px) {
+    border-bottom: 1px solid @color-special_grey;
+  }
 }

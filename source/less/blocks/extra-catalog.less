@@ -1,13 +1,24 @@
 .extra-catalog {
+  border: none;
+  padding: 0;
+  border-top: 2px solid @color-basic-green;
+  position: relative;
+}
+
+.extra-catalog__wrapper {
   display: grid;
+  gap: 35px;
 
   @media (min-width: 1280px) {
     grid-template-columns: 1fr 245px;
     gap: 80px;
+    min-height: 466px;
+    align-items: center;
   }
 }
 
 .extra-catalog__title {
+  margin: 0;
   font-family: "Oswald", sans-serif;
   font-weight: 400;
   font-size: 24px;
@@ -15,6 +26,10 @@
   /* identical to box height, or 100% */
 
   color: @color-black;
+  position: absolute;
+  transform: translate(-20px, -50%);
+  padding: 0 20px;
+  background-color: @color-white;
 
   @media (min-width: 768px) {
     font-size: 36px;
@@ -28,6 +43,21 @@
 
 .extra-catalog__list {
   margin: 0;
+  margin-top: 43px;
   padding: 0;
   list-style: none;
+  border-bottom: 1px solid @color-special_grey;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 768px) {
+    border: 1px solid @color-special_grey;
+    border-top: none;
+  }
+
+  @media (min-width: 1280px) {
+    margin-top: 0;
+    border: none;
+    border-bottom: 1px solid @color-special_grey;
+  }
 }

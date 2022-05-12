@@ -2,6 +2,47 @@
   border: none;
   margin: 0;
   padding: 0;
+  border-top: 2px solid @color-basic-green;
+  position: relative;
+}
+
+.fieldset--contacts {
+  margin-top: 44px;
+  min-height: 214px;
+
+  @media (min-width: 768px) {
+    margin-top: 99px;
+    min-height: 301px;
+  }
+
+  @media (min-width: 1280px) {
+    margin-top: 93px;
+    min-height: 231px;
+  }
+}
+
+.fieldset__comment {
+  min-height: 237px;
+
+  @media (min-width: 768px) {
+    min-height: 350px;
+  }
+
+  @media (min-width: 1280px) {
+    min-height: 354px;
+  }
+}
+
+.fieldset__extra {
+  min-height: 234px;
+
+  @media (min-width: 1280px) {
+    min-height: 169px;
+  }
+}
+
+.fieldset--without-legend {
+  border: none;
 }
 
 .fieldset__title {
@@ -10,10 +51,18 @@
   font-size: 24px;
   line-height: 26px;
   /* or 108% */
+  max-width: 190px;
+  padding: 0 20px;
+  background-color: @color-white;
+  position: absolute;
+  transform: translate(-20px, -50%);
 
   @media (min-width: 768px) {
     font-size: 36px;
     line-height: 36px;
+    max-width: 100%;
+    padding: 0 40px;
+    transform: translate(-40px, -50%);
   }
 
   color: @color-black;
