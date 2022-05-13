@@ -1,10 +1,14 @@
 .order-all {
   min-height: 290px;
   background-color: fade(@color-basic-green, 85%);
-  background-image: url("./../img/order-all-back.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-image: url("./../img/order-all-back.jpg");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("./../img/order-all-back@2x.jpg");
+  }
 
   display: flex;
   flex-direction: column;
@@ -17,6 +21,22 @@
     width: 78px;
     height: 80px;
     background-image: url("./../img/icon_gift.svg");
+  }
+
+  @media (min-width: 768px) {
+    background-image: url("./../img/order-all-back-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("./../img/order-all-back-tablet@2x.jpg");
+    }
+  }
+
+  @media (min-width: 1280px) {
+    background-image: url("./../img/order-all-back.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("./../img/order-all-back@2x.jpg");
+    }
   }
 }
 

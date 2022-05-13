@@ -39,12 +39,16 @@
 
 .promo__background {
   background-color: fade(@color-basic-green, 85%);
-  background-image: url("./../img/promo-back.jpg");
+  background-image: url("./../img/promo/back.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   grid-row: 1/2;
   grid-column: 1/-1;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("./../img/promo/back@2x.jpg");
+  }
 
   @media (min-width: 768px) {
     display: none;
@@ -54,7 +58,12 @@
     display: block;
     grid-row: 1/-1;
     grid-column: -1/-2;
-    background-image: url("./../img/promo-back-big.jpg");
+    background-image: url("./../img/promo/back-desktop.jpg");
+    background-position: left;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("./../img/promo/back-desktop@2x.jpg");
+    }
   }
 }
 

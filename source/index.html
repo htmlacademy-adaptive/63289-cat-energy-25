@@ -113,7 +113,10 @@
             </div>
           </div>
           <div class="example__progress progress">
-            <img class="progress__image" src="./img/before-mobile.png" alt="Кот Борис" />
+            <picture>
+              <source media="(min-width: 768px)" srcset="./img/example/cat-tablet.png 1x, ./img/emaxple/cat-tablet@2x.png 2x"/>
+              <img class="progress__image" src="./img/example/cat-before-mobile.png" srcset="./img/example/cat-before-mobile@2x.png 2x" alt="Кот Борис" />
+            </picture>
             <div class="progress__slider slider">
               <span class="slider__before">Было</span>
               <div class="slider__line">
