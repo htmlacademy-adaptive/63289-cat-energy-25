@@ -4,6 +4,14 @@
 
   &--dark {
     background-color: @color-basic-grey;
+
+    & .contacts__header {
+      background-color: @color-basic-grey;
+
+      @media (min-width: 1280px) {
+        background-color: @color-white;
+      }
+    }
   }
 
   @media (min-width: 768px) {
@@ -40,6 +48,8 @@
   align-items: center;
 
   @media (min-width: 1280px) {
+    box-sizing: border-box;
+    padding: 0 80px;
     width: 565px;
     min-height: 198px;
   }

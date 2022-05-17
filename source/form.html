@@ -20,13 +20,13 @@
         </div>
         <nav class="main-header__nav">
           <ul class="main-header__site-nav site-nav">
-            <li class="site-nav__item site-nav__item--current">
+            <li class="site-nav__item">
               <a class="site-nav__link site-nav__link--constant-color" href="./index.html">Главная</a>
             </li>
             <li class="site-nav__item">
               <a class="site-nav__link site-nav__link--constant-color" href="./catalog.html">Каталог продукции</a>
             </li>
-            <li class="site-nav__item">
+            <li class="site-nav__item site-nav__item--current">
               <a class="site-nav__link site-nav__link--constant-color" href="./form.html">Подпор программы</a>
             </li>
           </ul>
@@ -64,21 +64,21 @@
                 <label class="field__label" for="form-program-slim">
                   <input class="field__radio visually-hidden" type="radio" name="program" value="slim" id="form-program-slim">
                   <span class="field__radio-control"></span>
-                  Похудение
+                  <span>Похудение</span>
                 </label>
               </li>
               <li class="field">
                 <label class="field__label" for="form-program-pro">
                   <input class="field__radio visually-hidden" type="radio" name="program" value="pro" id="form-program-pro">
                   <span class="field__radio-control"></span>
-                  Набор массы
+                  <span>Набор массы</span>
                 </label>
               </li>
               <li class="field">
                 <label class="field__label" for="form-program-none">
                   <input class="field__radio visually-hidden" type="radio" name="program" value="none" id="form-program-none">
                   <span class="field__radio-control"></span>
-                  Не знаю (Нужен ваш совет)
+                  <span>Не знаю (Нужен ваш совет)</span>
                 </label>
               </li>
             </ul>
@@ -89,13 +89,19 @@
             </div>
             <div class="wrapper wrapper--in">
               <div class="survey__block-contacts">
-                <p class="field field--icon field--icon-email">
+                <p class="field">
                   <label class="field__label" for="form-age">E-mail:*</label>
                   <input  class="field__input" type="email" name="email" id="form-email" required/>
+                  <svg class="field__icon" width="20" heigth="15">
+                    <use href="img/sprite.svg#icon-email"></use>
+                  </svg>
                 </p>
-                <p class="field field--icon field--icon-phone">
+                <p class="field">
                   <label class="field__label" for="form-age">Телефон:*</label>
                   <input  class="field__input field__input--icon" type="tel" name="phone" id="form-phone" required/>
+                  <svg class="field__icon field__icon--phone" width="20" heigth="20">
+                    <use href="img/sprite.svg#icon-phone"></use>
+                  </svg>
                 </p>
               </div>
             </div>
@@ -122,28 +128,28 @@
                   <label class="field__label" for="form-sugar-substitute">
                     <input class="field__checkbox visually-hidden" type="checkbox" name="sugar-substitute" id="form-sugar-substitute">
                     <span class="field__checkbox-control"></span>
-                    Сахарозаменитель
+                    <span>Сахарозаменитель</span>
                   </label>
                 </li>
                 <li class="field">
                   <label class="field__label" for="form-water">
-                    <input class="field__checkbox visually-hidden" type="checkbox" name="sugar-substitute" id="form-water">
+                    <input class="field__checkbox visually-hidden" type="checkbox" name="water" id="form-water">
                     <span class="field__checkbox-control"></span>
-                    Питьевая вода
+                    <span>Питьевая вода</span>
                   </label>
                 </li>
                 <li class="field">
                   <label class="field__label" for="form-milk">
-                    <input class="field__checkbox visually-hidden" type="checkbox" name="sugar-substitute" id="form-milk">
+                    <input class="field__checkbox visually-hidden" type="checkbox" name="milk" id="form-milk">
                     <span class="field__checkbox-control"></span>
-                    Молоко
+                    <span>Молоко</span>
                   </label>
                 </li>
                 <li class="field">
                   <label class="field__label" for="form-vitamins">
-                    <input class="field__checkbox visually-hidden" type="checkbox" name="sugar-substitute" id="form-vitamins">
+                    <input class="field__checkbox visually-hidden" type="checkbox" name="vitamins" id="form-vitamins">
                     <span class="field__checkbox-control"></span>
-                    Витамины
+                    <span>Витамины</span>
                   </label>
                 </li>
               </ul>
@@ -157,7 +163,7 @@
       </section>
       <section class="contacts contacts--dark">
         <h2 class="visually-hidden">Контакты</h2>
-        <div class="contacts__wrapper wrapper">
+        <div class="contacts__wrapper wrapper wrapper--">
           <header class="contacts__header">
             <p class="contacts__message">Приглашаем <br /> к сотрудничеству <br /> дилеров!</p>
             <div class="contacts__address">
@@ -182,18 +188,32 @@
         </div>
         <ul class="main-footer__social-list social-list">
           <li class="social-list__item">
-            <a class="social-list__link social-list__link--vk" href="#" aria-label="vk"></a>
+            <a class="social-list__link" href="#" aria-label="vk">
+              <svg class="social-list__icon" width="28" heigth="22">
+                <use href="img/sprite.svg#icon-vk"></use>
+              </svg>
+            </a>
           </li>
           <li class="social-list__item">
-            <a class="social-list__link social-list__link--youtube" href="#" aria-label="Youtube"></a>
+            <a class="social-list__link" href="#" aria-label="Youtube">
+              <svg class="social-list__icon" width="28" heigth="22">
+                <use href="img/sprite.svg#icon-youtube"></use>
+              </svg>
+            </a>
           </li>
           <li class="social-list__item">
-            <a class="social-list__link social-list__link--telegram" href="#" aria-label="Telegram"></a>
+            <a class="social-list__link" href="#" aria-label="Telegram">
+              <svg class="social-list__icon" width="28" heigth="22">
+                <use href="img/sprite.svg#icon-telegram"></use>
+              </svg>
+            </a>
           </li>
         </ul>
-        <div class="main-footer__developer developer" href="">
-          <p class="developer__text">HTML Academy</p>
-          <a class="developer__link" href=""><img class="developer__logo" src="./img/html-academy.svg" alt="Логотип HtmlAcademy"></a>
+        <div class="main-footer__developer developer">
+          <a class="developer__link" href="https://htmlacademy.ru/">HTML Academy</a>
+          <a class="developer__link" href="https://htmlacademy.ru/">
+            <svg class="developer__logo" width="27" heigth="34"><use href="img/sprite.svg#htmlacademy"></use></svg>
+          </a>
         </div>
       </div>
     </footer>

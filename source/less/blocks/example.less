@@ -5,8 +5,13 @@
   background-color: #eaeaea;
 
   @media (min-width: 768px) {
-    min-height: 619px;
-    background-color: @color-white;
+    min-height: 1080px;
+    background: linear-gradient(white 619px, #eaeaea 619px); /* stylelint-disable-line */
+  }
+
+  @media (min-width: 1280px) {
+    min-height: 641px;
+    background: linear-gradient(white 179px, #f2f2f2 179px); /* stylelint-disable-line */
   }
 }
 
@@ -62,6 +67,7 @@
 
   @media (min-width: 1280px) {
     margin-top: 54px;
+    margin-right: 70px;
   }
 }
 
@@ -70,5 +76,9 @@
 
   @media (min-width: 768px) {
     margin-top: 85px;
+  }
+
+  @media (min-width: 1280px) {
+    margin-top: 0;
   }
 }

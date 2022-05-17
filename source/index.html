@@ -10,12 +10,16 @@
     <header class="page__header main-header main-header--no-js">
       <div class="main-header__wrapper">
         <div class="main-header__logos">
-          <picture>
-            <source media="(min-width: 1280px)" srcset="./img/logo-desktop.svg" />
-            <source media="(min-width: 768px)" srcset="./img/logo-tablet.svg" />
-            <img class="main-header__icon" src="./img/logo-mobile.svg" alt="Иконка Кота" />
-          </picture>
-          <img class="main-header__logo" src="./img/header-logo.svg" width="101" height="18" alt="Логотип Cat Energy" />
+          <a class="main-header__icon" href="./index.html">
+            <picture>
+              <source media="(min-width: 1280px)" srcset="./img/logo-desktop.svg" />
+              <source media="(min-width: 768px)" srcset="./img/logo-tablet.svg" />
+              <img src="./img/logo-mobile.svg" alt="Иконка Кота" />
+            </picture>
+          </a>
+          <a class="main-header__logo" href="./index.html">
+            <img src="./img/header-logo.svg" width="101" height="18" alt="Логотип Cat Energy" />
+          </a>
           <button class="main-header__toggle"></button>
         </div>
         <nav class="main-header__nav">
@@ -130,7 +134,7 @@
       </section>
       <section class="contacts">
         <h2 class="visually-hidden">Контакты</h2>
-        <div class="contacts__wrapper wrapper">
+        <div class="contacts__wrapper wrapper wrapper--in">
           <header class="contacts__header">
             <p class="contacts__message">Приглашаем <br /> к сотрудничеству <br /> дилеров!</p>
             <div class="contacts__address">
@@ -150,23 +154,37 @@
     </main>
     <footer class="main-footer">
       <div class="main-footer__wrapper">
-        <div class="main-footer__logo">
+        <a class="main-footer__logo" href="./index.html">
           <img class="main-footer__logo-image" src="./img/footer-logo.svg" alt="Логотип Cat Energy">
-        </div>
+        </a>
         <ul class="main-footer__social-list social-list">
           <li class="social-list__item">
-            <a class="social-list__link social-list__link--vk" href="#" aria-label="vk"></a>
+            <a class="social-list__link" href="#" aria-label="vk">
+              <svg class="social-list__icon" width="28" heigth="22">
+                <use href="img/sprite.svg#icon-vk"></use>
+              </svg>
+            </a>
           </li>
           <li class="social-list__item">
-            <a class="social-list__link social-list__link--youtube" href="#" aria-label="Youtube"></a>
+            <a class="social-list__link" href="#" aria-label="Youtube">
+              <svg class="social-list__icon" width="28" heigth="22">
+                <use href="img/sprite.svg#icon-youtube"></use>
+              </svg>
+            </a>
           </li>
           <li class="social-list__item">
-            <a class="social-list__link social-list__link--telegram" href="#" aria-label="Telegram"></a>
+            <a class="social-list__link" href="#" aria-label="Telegram">
+              <svg class="social-list__icon" width="28" heigth="22">
+                <use href="img/sprite.svg#icon-telegram"></use>
+              </svg>
+            </a>
           </li>
         </ul>
-        <div class="main-footer__developer developer" href="">
-          <p class="developer__text">HTML Academy</p>
-          <a class="developer__link" href=""><img class="developer__logo" src="./img/html-academy.svg" alt="Логотип HtmlAcademy"></a>
+        <div class="main-footer__developer developer">
+          <a class="developer__link" href="https://htmlacademy.ru/">HTML Academy</a>
+          <a class="developer__link" href="https://htmlacademy.ru/">
+            <svg class="developer__logo" width="27" heigth="34"><use href="img/sprite.svg#htmlacademy"></use></svg>
+          </a>
         </div>
       </div>
     </footer>
