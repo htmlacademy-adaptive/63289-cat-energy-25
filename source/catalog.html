@@ -20,10 +20,10 @@
         </div>
         <nav class="main-header__nav">
           <ul class="main-header__site-nav site-nav">
-            <li class="site-nav__item site-nav__item--current">
-              <a class="site-nav__link site-nav__link--constant-color" href="#">Главная</a>
-            </li>
             <li class="site-nav__item">
+              <a class="site-nav__link site-nav__link--constant-color" href="./index.html">Главная</a>
+            </li>
+            <li class="site-nav__item site-nav__item--current">
               <a class="site-nav__link site-nav__link--constant-color" href="./catalog.html">Каталог продукции</a>
             </li>
             <li class="site-nav__item">
@@ -236,18 +236,32 @@
         </div>
         <ul class="main-footer__social-list social-list">
           <li class="social-list__item">
-            <a class="social-list__link social-list__link--vk" href="#" aria-label="vk"></a>
+            <a class="social-list__link" href="#" aria-label="vk">
+              <svg class="social-list__icon" width="28" heigth="22">
+                <use href="img/sprite.svg#icon-vk"></use>
+              </svg>
+            </a>
           </li>
           <li class="social-list__item">
-            <a class="social-list__link social-list__link--youtube" href="#" aria-label="Youtube"></a>
+            <a class="social-list__link" href="#" aria-label="Youtube">
+              <svg class="social-list__icon" width="28" heigth="22">
+                <use href="img/sprite.svg#icon-youtube"></use>
+              </svg>
+            </a>
           </li>
           <li class="social-list__item">
-            <a class="social-list__link social-list__link--telegram" href="#" aria-label="Telegram"></a>
+            <a class="social-list__link" href="#" aria-label="Telegram">
+              <svg class="social-list__icon" width="28" heigth="22">
+                <use href="img/sprite.svg#icon-telegram"></use>
+              </svg>
+            </a>
           </li>
         </ul>
-        <div class="main-footer__developer developer" href="">
-          <p class="developer__text">HTML Academy</p>
-          <a class="developer__link" href=""><img class="developer__logo" src="./img/html-academy.svg" alt="Логотип HtmlAcademy"></a>
+        <div class="main-footer__developer developer">
+          <a class="developer__link" href="https://htmlacademy.ru/">HTML Academy</a>
+          <a class="developer__link" href="https://htmlacademy.ru/">
+            <svg class="developer__logo" width="27" heigth="34"><use href="img/sprite.svg#htmlacademy"></use></svg>
+          </a>
         </div>
       </div>
     </footer>

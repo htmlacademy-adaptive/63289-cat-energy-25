@@ -107,6 +107,18 @@
     width: 24px;
     height: 12px;
     background-image: url("./../img/icon-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+
+  &:hover {
+    &::after {
+      width: 32px;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 
   @media (min-width: 768px) {
