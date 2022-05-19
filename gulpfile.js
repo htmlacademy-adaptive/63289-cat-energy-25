@@ -57,12 +57,16 @@ const svgBuild = () => gulp.src('source/img/*.svg', '!source/img/icons/*.svg')
   .pipe(svgo())
   .pipe(gulp.dest('build/img'));
 
-const sprite = () => gulp.src('source/img/icons/*.svg')
-  .pipe(svgstore({
-    inlineSvg: true
-  }))
-  .pipe(rename('sprite.svg'))
-  .pipe(gulp.dest('source/img'))
+const sprite = () => {
+  del('source/img.sprite.svg');
+
+  return gulp.src('source/img/icons/*.svg')
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+    .pipe(rename('sprite.svg'))
+    .pipe(gulp.dest('source/img'))
+}
 
 const spriteBuild = () => gulp.src('source/img/icons/*.svg')
   .pipe(svgstore({
@@ -110,6 +114,7 @@ const server = (done) => {
 const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
   gulp.watch('source/*.html').on('change', browser.reload);
+  gulp.watch('source/img/icons/*.svg', gulp.series(sprite) );
 }
 
 export const build = gulp.series(
