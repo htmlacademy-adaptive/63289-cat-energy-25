@@ -32,7 +32,7 @@
 .survey__program-selection {
   margin: 0 -21px;
   margin-top: 24px;
-  padding: 21px;
+  padding: 20px;
   border: 1px solid #d9d9d9;
   display: grid;
   gap: 13px;
@@ -70,6 +70,7 @@
 
   @media (min-width: 768px) {
     margin-top: 66px;
+    gap: 19px;
   }
 
   @media (min-width: 1280px) {
@@ -121,15 +122,32 @@
 }
 
 .survey__block-submit {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  min-height: 110px;
 
   @media (min-width: 768px) {
+    display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
+    min-height: 126px;
   }
 
   @media (min-width: 1280px) {
     gap: 80px;
     min-height: 134px;
+  }
+}
+
+.survey__required {
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  margin: 0;
+  margin-top: 20px;
+
+  @media (min-width: 768px) {
+    text-align: left;
+    margin-top: 17px;
   }
 }
