@@ -7,12 +7,16 @@
   color: @color-black;
 
   display: grid;
+  grid-template-columns: auto 86px auto;
   align-items: center;
-  grid-template-columns: auto 1fr auto;
-  gap: 13px;
+  justify-content: center;
+  gap: 18px;
 
   @media (min-width: 768px) {
     gap: 23px;
+    grid-template-columns: auto 430px auto;
+    font-size: 20px;
+    line-height: 30px;
   }
 }
 

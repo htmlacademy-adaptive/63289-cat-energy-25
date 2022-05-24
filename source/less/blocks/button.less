@@ -20,9 +20,26 @@
   &:active {
     color: fade(@color-white, 30%);
   }
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.button--font-fix {
+  @media (min-width: 768px) {
+    font-size: 14px;
+    line-height: 18px;
+  }
 }
 
 .button--medium {
   font-size: 16px;
   line-height: 20px;
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+    height: 54px;
+  }
 }

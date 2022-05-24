@@ -163,7 +163,7 @@
       </section>
       <section class="contacts contacts--dark">
         <h2 class="visually-hidden">Контакты</h2>
-        <div class="contacts__wrapper wrapper wrapper--">
+        <div class="contacts__wrapper wrapper wrapper--in">
           <header class="contacts__header">
             <p class="contacts__message">Приглашаем <br /> к сотрудничеству <br /> дилеров!</p>
             <div class="contacts__address">
@@ -173,7 +173,8 @@
           </header>
         </div>
         <div class="contacts__map">
-          <picture>
+          <iframe class="contacts__map-interactive" width="600" height="362" style="border:0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5984565545334!2d30.322439569043365!3d59.93880493055556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1512652564998" allowfullscreen></iframe>
+          <picture class="contacts__map-picture">
             <source media="(min-width: 850px)" srcset="./img/map-desktop.png 1x, ./img/map-desktop@2x.png 2x"/>
             <source media="(min-width: 400px)" srcset="./img/map-tablet.png 1x, ./img/map-tablet@2x.png 2x"/>
             <img class="contacts__map-image" src="./img/map-mobile.png" srcset="./img/map-mobile@2x.png 2x" alt="Карта города" />
