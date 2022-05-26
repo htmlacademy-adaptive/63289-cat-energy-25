@@ -1,5 +1,5 @@
 .main-header__wrapper {
-  margin: 0 20px;
+  // margin: 0 20px;
   display: flex;
   flex-direction: column;
   background-color: var(--color-basic-white);
@@ -18,12 +18,14 @@
 }
 
 .main-header__logos {
+  margin: 0 20px;
   min-height: 65px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   @media (min-width: 768px) {
+    margin: 0;
     justify-content: flex-start;
   }
 }
@@ -72,7 +74,6 @@
   width: 100%;
   position: absolute;
   margin: 0;
-  margin-left: -20px;
 
   @media (min-width: 768px) {
     position: static;
@@ -95,6 +96,10 @@
 }
 
 .main-header--no-js {
+  .main-header__nav {
+    display: block;
+  }
+
   .main-header__site-nav {
     position: static;
   }

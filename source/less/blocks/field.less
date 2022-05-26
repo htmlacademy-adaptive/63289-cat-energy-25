@@ -2,7 +2,7 @@
   display: flex;
   position: relative;
   align-items: center;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
@@ -26,6 +26,12 @@
 
   @media (min-width: 768px) {
     margin-right: 17px;
+  }
+
+  &--radio {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto 1fr;
   }
 }
 
